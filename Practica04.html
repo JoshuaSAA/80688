@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica 03</title>
+</head>
+<style>
+    img{
+    box-shadow: 5px 10px 10px red;
+    }
+    figure{
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>Random Picture</h1>
+    <div id="app"></div>
+    <!-- <figure>
+        <img src="http://picsum.photos/id/1/200/200" alt="">
+        <figcaption>Jhone</figcaption>
+    </figure>
+    <figure>
+        <img src="http://picsum.photos/id/2/200/200" alt="">
+        <figcaption>jane</figcaption>
+    </figure>
+    <figure>
+        <img src="http://picsum.photos/id/1/200/200" alt="">
+            <figcaption>Jhone</figcaption>
+    </figure>
+        <figure>
+            <img src="http://picsum.photos/id/2/200/200" alt="">
+            <figcaption>jane</figcaption>
+        </figure> -->
+        <script>
+                const app = document.getElementById("app")
+                const url = "http://picsum.photos/id/"
+                const size = "/200/200"
+                const picture = (parametro) => {
+                const src = url+parametro.id+size
+                return `
+                    <figure><img src="${src}" alt="">
+                        <figcaption>${parametro.nombre}</figcaption></figure>
+                        `
+                }
+            app.innerHTML=picture({id:"1",nombre:"jhone"})
+            app.innerHTML+=picture({id:"2",nombre:"jane"})
+            app.innerHTML+=picture({id:"3",nombre:"jhoana"})
+                     
+        </script>
+</body>
+</html>
+
